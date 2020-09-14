@@ -1,0 +1,27 @@
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Unlock PDF</h1>
+    <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
+</div>
+<div>
+
+    <div class="col-xl-12 col-md-12 text-center">
+        <div class="card bg-warning border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+                <i class="fa fa-file-pdf fa-4x" style="color: white;"></i>
+                <div>
+                    <div (click)="clickEventForfile()" class="cursor">
+                        <div class="card-body rounded col-md-2" style="background-color: white;">
+                            <i class="fa fa-file"></i><b> &nbsp; CHOOSE FILE</b>
+                        </div>
+                    </div>
+                    <span>{{fileName}}</span>
+                </div>
+
+                <input id="chooseFile" hidden type="file" (change)="handleFile($event.target.files)"
+                    placeholder="Upload file" accept=".pdf,.doc,.docx">
+
+            </div>
+        </div>
+    </div>
+
+</div>
